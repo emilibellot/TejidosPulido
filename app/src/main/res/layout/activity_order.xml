@@ -1,0 +1,1501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/back_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/back_to_menu_carrito"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:background="@null"
+            android:onClick="onClick"
+            android:src="@drawable/ic_back_to"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/faseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/productDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back_to">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/stateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginHorizontal="45dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/vertical_bordered_layout">
+
+                    <ImageView
+                        android:id="@+id/fase1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/fase2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/fase3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/directionFase"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/directionButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_fase_one_green"
+                            android:background="@null"/>
+
+                        <TextView
+                            android:id="@+id/directionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Direccion"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:maxLines="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/payFase"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/payButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_fase_two_default"
+                            android:background="@null"/>
+
+                        <TextView
+                            android:id="@+id/payText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Pago"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:maxLines="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/confirmationFase"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/confirmationButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_fase_three_default"
+                            android:background="@null"/>
+
+                        <TextView
+                            android:id="@+id/confirmationText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Confirmacion"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:maxLines="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/hechoFase"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/hechoButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_fase_four_default"
+                            android:background="@null"/>
+
+                        <TextView
+                            android:id="@+id/hechoText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Hecho"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:maxLines="1"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/displayDirection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/direccionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/direccionEnvio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/DireccionEnvio"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <ImageButton
+                            android:id="@+id/editDireccionEnvio"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="@null"
+                            android:src="@drawable/ic_edit"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/introduceDireccion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/introduceDireccion"
+                        android:paddingTop="10dp"
+                        android:paddingHorizontal="5dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/direccionDataLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nombreContacto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingTop="10dp"
+                            android:paddingHorizontal="5dp" />
+
+                        <TextView
+                            android:id="@+id/nombreCalle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingHorizontal="5dp"/>
+
+                        <TextView
+                            android:id="@+id/codigoPostal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingHorizontal="5dp"/>
+
+                        <TextView
+                            android:id="@+id/pais"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingHorizontal="5dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/direccionesLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_addresses"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"/>
+
+                        <CheckBox
+                            android:id="@+id/add_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="@string/addAddress"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/newAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:focusable="true">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/nameLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/nombre"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginVertical="5dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/surnameLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/apellido"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginVertical="5dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/surname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/addressLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/DireccionObligatoria"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginVertical="5dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/cpLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/CodigoPostal"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginVertical="5dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/cp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/cityLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Poblacion"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginVertical="5dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/city"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/countryLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Pais"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginVertical="5dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/country"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <CheckBox
+                                android:id="@+id/setDefault"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/defaultAddress"
+                                android:textColor="@color/black"
+                                android:layout_marginHorizontal="20dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="20dp"
+                                android:paddingHorizontal="30dp"
+                                android:text="@string/Obligatorio"/>
+
+                            <Button
+                                android:id="@+id/saveAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button_white"
+                                android:text="@string/GuardarDireccion"
+                                android:textColor="@color/primary"
+                                android:textStyle="bold"
+                                android:layout_margin="20dp"/>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/submitAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/primary"
+                            android:text="@string/Siguiente"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="10dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/direccionFacturacionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/direccionFacturacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/DireccionFacturacion"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <ImageButton
+                            android:id="@+id/editDireccionFacturacion"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="@null"
+                            android:src="@drawable/ic_edit"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/introduceDireccionFacturacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/introduceDireccion"
+                        android:paddingTop="10dp"
+                        android:paddingHorizontal="5dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/direccionFacturacionDataLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nombreContactoFacturacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingTop="10dp"
+                            android:paddingHorizontal="5dp"/>
+
+                        <TextView
+                            android:id="@+id/nombreCalleFacturacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingHorizontal="5dp"/>
+
+                        <TextView
+                            android:id="@+id/codigoPostalFacturacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingHorizontal="5dp"/>
+
+                        <TextView
+                            android:id="@+id/paisFacturacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingHorizontal="5dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/direccionesFacturacionLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_addressesFacturacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"/>
+
+                        <CheckBox
+                            android:id="@+id/add_addressFacturacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="@string/addAddress"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/newAddressFacturacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:focusable="true">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/nameFacturacionLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/nombre"
+                                android:layout_marginHorizontal="20dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/nameFacturacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/surnameFacturacionLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/apellido"
+                                android:layout_marginHorizontal="20dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/surnameFacturacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/addressFacturacionLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/DireccionObligatoria"
+                                android:layout_marginHorizontal="20dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/addressFacturacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/cpFacturacionLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/CodigoPostal"
+                                android:layout_marginHorizontal="20dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/cpFacturacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/cityFacturacionLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Poblacion"
+                                android:layout_marginHorizontal="20dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/cityFacturacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/countryFacturacionLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Pais"
+                                android:layout_marginHorizontal="20dp"
+                                app:hintTextColor="@color/black"
+                                app:errorEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/countryFacturacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:maxLines="1"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <CheckBox
+                                android:id="@+id/setDefaultFacturacion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/defaultAddress"
+                                android:textColor="@color/black"
+                                android:layout_marginHorizontal="20dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="20dp"
+                                android:paddingHorizontal="30dp"
+                                android:text="@string/Obligatorio"/>
+
+                            <Button
+                                android:id="@+id/saveAddressFacturacion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button_white"
+                                android:text="@string/GuardarDireccion"
+                                android:textColor="@color/primary"
+                                android:textStyle="bold"
+                                android:layout_margin="20dp"/>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/submitAddressFacturacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/primary"
+                            android:text="@string/Siguiente"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="10dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/datosContactoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/datosContacto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/DatosContacto"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/infoDatosContacto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infoDatosContacto"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <TextView
+                        android:id="@+id/telefonoMobil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/telefonoMobil"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <EditText
+                        android:id="@+id/phoneContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_layout"
+                        android:layout_marginHorizontal="10dp"
+                        android:padding="5dp"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/goToPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    android:text="@string/Siguiente"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/displayPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/formaPagoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/formaPago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/FormaPago"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bottom_bordered_layout">
+
+                        <RadioGroup
+                            android:id="@+id/formaPagoRdioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true">
+
+                            <RadioButton
+                                android:id="@+id/Paypal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Paypal"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="25dp"/>
+
+                            <RadioButton
+                                android:id="@+id/Tarjeta"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Tarjeta"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="25dp"/>
+
+                            <RadioButton
+                                android:id="@+id/Reembolso"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Rembolso"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="25dp"/>
+
+                        </RadioGroup>
+
+                        <RelativeLayout
+                            android:id="@+id/PaypalLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="@drawable/bottom_bordered_layout">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_paypal"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/tarjetaLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:paddingTop="5dp"
+                            android:background="@drawable/bottom_bordered_layout"
+                            android:layout_below="@+id/PaypalLayout">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_visa"/>
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="45dp"
+                                android:src="@drawable/ic_mastercard" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:paddingTop="7dp"
+                            android:layout_below="@+id/tarjetaLayout">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_cash_on_delivery"/>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/codigoDescuentoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/codigoDescuento"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/codigoDescuento"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/opcional"
+                            android:textSize="14sp"
+                            android:paddingTop="6dp"
+                            android:layout_toEndOf="@+id/codigoDescuento"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/infoCodigoDescuento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infoCodigoDescuento"
+                        android:padding="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/envioLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#17131313"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Envio"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <TextView
+                            android:id="@+id/precioEnvio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Total"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Iva"
+                            android:textSize="12sp"
+                            android:paddingTop="7dp"
+                            android:layout_toEndOf="@+id/total"/>
+
+                        <TextView
+                            android:id="@+id/precioTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"/>
+
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/goToCofirmation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/datosContactoLayout"
+                        android:background="@color/primary"
+                        android:onClick="onClick"
+                        android:text="@string/Siguiente"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infoComprobarDatos"
+                        android:textAlignment="center"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:paddingBottom="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/displayConfirmation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/confirmationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/pedido"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Pedido"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fechaEntrega"
+                        android:padding="5dp"/>
+
+                    <TextView
+                        android:id="@+id/fechaEntrega"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:padding="5dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_pedido"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/direccionEnvioConfirmationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/direccionEnvioConfirmation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/DireccionEnvio"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <ImageButton
+                            android:id="@+id/editdireccionEnvioConfirmation"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="@null"
+                            android:src="@drawable/ic_edit"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/nombreContactoEnvioConfirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"
+                        android:paddingHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/nombreCalleEnvioConfirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/codigoPostalEnvioConfirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/paisEnvioConfirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/direccionFacturacionLayoutConfirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/direccionFacturacionConfirmation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/DireccionEnvio"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <ImageButton
+                            android:id="@+id/editDireccionFacturacionConfirmation"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="@null"
+                            android:src="@drawable/ic_edit"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/nombreContactoFacturacionConfirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"
+                        android:paddingHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/nombreCalleFacturacionConfirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/codigoPostalFacturacionConfirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/paisFacturacionConfirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/formaPagoLayoutConfirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/formaPagoConfirmation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/FormaPago"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/formaPagoConfirmationImage"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"/>
+
+                        <TextView
+                            android:id="@+id/formaPagoConfirmationText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/formaPagoConfirmationImage"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/codigoDescuentoLayoutConfirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/codigoDescuentoConfirmation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/codigoDescuento"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/opcional"
+                            android:paddingTop="6dp"
+                            android:layout_toEndOf="@+id/codigoDescuentoConfirmation"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_layout"
+                        android:layout_marginHorizontal="10dp"
+                        android:padding="5dp"
+                        android:hint="@string/IntroduceCodigo"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/envioConfirmationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#17131313"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_bordered_layout"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Envio"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <TextView
+                            android:id="@+id/precioEnvioConfirmation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/totalConfirmation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Total"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Iva"
+                            android:textSize="12sp"
+                            android:paddingTop="7dp"
+                            android:layout_toEndOf="@+id/totalConfirmation"/>
+
+                        <TextView
+                            android:id="@+id/precioTotalConfirmation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"/>
+
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/goToHecho"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/datosContactoLayout"
+                        android:background="@color/primary"
+                        android:onClick="onClick"
+                        android:text="@string/PagarSeguro"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infoTerminosPolitica"
+                        android:textAlignment="center"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:paddingBottom="30dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

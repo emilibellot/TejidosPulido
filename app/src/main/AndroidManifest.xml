@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tejidospulido">
+    package="com.example.tejidospulido_app">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -8,18 +14,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TejidosPulido">
-        <activity android:name="com.example.tejidospulido_app.LoginActivity" >
+        android:theme="@style/Theme.Tejidospulidoapp">
+        <activity android:name=".Vista.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Vista.LoginActivity"/>
+        <activity android:name=".Vista.SignupActivity"/>
+        <activity android:name=".Vista.MainActivity" />
+        <activity android:name=".Vista.OrdersActivity" />
+        <activity android:name=".Vista.OrderActivity" />
+        <activity android:name=".Vista.AddressActivity" />
+        <activity android:name=".Vista.NewAddressActivity" />
+        <activity android:name=".Vista.ProfileActivity" />
+        <activity android:name=".Vista.PersonalDataActivity" />
+        <activity android:name=".Vista.SettingsActivity" />
+        <activity android:name=".Vista.HelpActivity" />
+        <activity android:name=".Vista.PageActivity" />
+        <activity android:name=".Vista.ProductActivity" />
+        <activity android:name=".Vista.ValorationsActivity" />
+        <activity android:name=".Vista.CombinationActivity" />
+        <activity android:name=".Vista.CheckOutActivity" />
 
-        <activity android:name="com.example.tejidospulido_app.SignupActivity"/>
-        <activity android:name=".MainActivity" />
-
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

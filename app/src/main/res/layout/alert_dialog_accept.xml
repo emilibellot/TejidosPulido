@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dp">
+
+    <ImageView
+        android:id="@+id/alertIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:id="@+id/titleDialag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/alertIcon"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/messageDialag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/alertIcon"
+        android:layout_below="@+id/titleDialag"
+        android:textSize="14sp"
+        android:layout_marginVertical="10dp"/>
+
+    <Button
+        android:id="@+id/okey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Aceptar"
+        android:background="@color/primary"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/messageDialag"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

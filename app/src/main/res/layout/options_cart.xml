@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/setQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setQuantity"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:id="@+id/addFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/AddFavoritos"
+        android:background="@color/white"
+        android:layout_below="@+id/setQuantity"/>
+
+    <Button
+        android:id="@+id/deleteCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Eliminar"
+        android:background="@color/white"
+        android:layout_below="@+id/addFavorites"/>
+
+</RelativeLayout>

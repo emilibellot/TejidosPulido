@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "490151190612",
+    "firebase_url": "https://tejidospulido-apptfg-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tejidospulido-apptfg",
+    "storage_bucket": "tejidospulido-apptfg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490151190612:android:531555c82c218c9e2e0dc1",
+        "android_client_info": {
+          "package_name": "com.example.tejidospulido"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490151190612-goevfpuibu8hb1sv93cu8ub4es8tnmfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpu-__ReXg7KWEqepKvEBdIMR7MSsSQao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490151190612-goevfpuibu8hb1sv93cu8ub4es8tnmfo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490151190612:android:1d5ff4ff002b5e2a2e0dc1",
+        "android_client_info": {
+          "package_name": "com.tejidospulido.shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490151190612-goevfpuibu8hb1sv93cu8ub4es8tnmfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpu-__ReXg7KWEqepKvEBdIMR7MSsSQao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490151190612-goevfpuibu8hb1sv93cu8ub4es8tnmfo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
